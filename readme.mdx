@@ -15,12 +15,23 @@ just use `yarn dev` or `npm run dev` to run code in dev mode. use postman to mak
 the folder structure are designed to provide maximum modularization and easy to maintain the code
 
 Project
-├─── assets (contains all the static assets we have inside the project e.g images, audio, documents etc)
-├─── src (contains whole source code)
-│ ├─── helpers (pure functions to help and serve other parts of application)
-│ ├─── routes (endpoints (URIs) respond to client requests)
-│ ├─── schema (data schemas to validate the data and also handle error messages)
-│ ├─── services (services are independent modules that can interact with other modules and mostly used in routes directly so perform specific module related task)
-│ │ └─── audio (audio module)
-│ └─── utils (utilities like constant and translation etc should be placed under this folder)
-└─── uploads (files that are uploaded by clients can be placed under this folder)
+├─── assets
+├─── src
+│ ├─── helpers
+│ ├─── routes
+│ ├─── schema
+│ ├─── services
+│ │ └─── audio
+│ └─── utils
+└─── uploads
+
+- assets: This directory holds all the static assets needed for my project, including images, audio files, documents, and more. I find it convenient to centralize these resources, making them easier to manage and reference throughout my codebase.
+- src: As the core of my project, the 'src' directory encompasses all my source code. Breaking it down:
+  - helpers: Here, I store pure functions crafted to support various parts of my application. These functions serve as essential building blocks, providing functionalities that I can reuse across different modules.
+  - routes: This is where I implement endpoints or URIs to handle client requests. Each route corresponds to a specific feature or resource within my application, ensuring a clear and organized structure.
+  - schema: In this directory, I define data schemas responsible for data validation and error handling. Clear data structures help ensure accurate and consistent data processing, reducing the likelihood of errors.
+  - services: Services are encapsulated modules that perform specialized tasks and can interact with other parts of my application. The 'audio' subdirectory reflects my focus on audio-related functionalities, showcasing the modularity and extensibility of my project.
+  - utils: Here, I store utilities, constants, translations, and other shared functionalities. This central repository of commonly used tools facilitates code reuse and promotes consistency across my project.
+- uploads: Dedicated to storing files uploaded by clients, this directory provides a segregated space for managing user-generated content. Keeping these files separate from my source code and assets ensures efficient handling and retrieval, contributing to a smoother user experience.
+
+This project structure, from my perspective, embodies best practices in software development, fostering a clean and organized codebase. It not only simplifies maintenance and collaboration but also lays a strong foundation for future expansion and feature enhancements.
