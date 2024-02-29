@@ -11,14 +11,17 @@ export const calculateFrameData = (buffer: Buffer): Record<string, any> => {
   const layerIndex = (var1 & 6) >> 1
   const layer = LAYERS[layerIndex]
 
+  // bit rate calculations
   const bitRateType = 'V' + versionNumber + 'L' + layer
   const bitRateIndex = (var2 & 240) >> 4
   const bitRate = BITRATES[bitRateType][bitRateIndex] || 0
 
+  // samples calculations
   const sampleRateIndex = (var2 & 12) >> 2
   const sampleRate = SAMPLERATES[version][sampleRateIndex] || 0
   const samples = SAMPLESDATA[versionNumber][layer]
 
+  // offset
   const padding = (var2 & 2) >> 1
 
   return {

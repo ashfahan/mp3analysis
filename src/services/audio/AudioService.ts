@@ -26,6 +26,7 @@ const AudioService = () => ({
         continue
       }
 
+      // gets current frame data
       let info = calculateFrameData(buffer)
 
       if (!info.frameSize || !info.samples) {
