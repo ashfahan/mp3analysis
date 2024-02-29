@@ -9,3 +9,18 @@ just use `yarn dev` or `npm run dev` to run code in dev mode. use postman to mak
 # Error Response
 
 ![Error Response](https://github.com/ashfahan/mp3analysis/blob/main/assets/fail.png?raw=true)
+
+# Architecture Design
+
+the folder structure are designed to provide maximum modularization and easy to maintain the code
+
+Project
+├─── assets (contains all the static assets we have inside the project e.g images, audio, documents etc)
+├─── src (contains whole source code)
+│ ├─── helpers (pure functions to help and serve other parts of application)
+│ ├─── routes (endpoints (URIs) respond to client requests)
+│ ├─── schema (data schemas to validate the data and also handle error messages)
+│ ├─── services (services are independent modules that can interact with other modules and mostly used in routes directly so perform specific module related task)
+│ │ └─── audio (audio module)
+│ └─── utils (utilities like constant and translation etc should be placed under this folder)
+└─── uploads (files that are uploaded by clients can be placed under this folder)
