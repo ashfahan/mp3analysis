@@ -12,9 +12,13 @@ const PORT = process.env.PORT || 3000
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
+// endpoint to handle file upload
 app.use('/file-upload', require('./routes/api.route'))
+
+// handle rest of the endpoints and sent not found
 app.use((req, res, next) => next(createError.NotFound()))
 
+// handle error responses globally
 const errorRequest: ErrorRequestHandler = (error, req, res, next) => {
   console.error(JSON.stringify(error, null, 2))
   res.status(error.status || 500).send({

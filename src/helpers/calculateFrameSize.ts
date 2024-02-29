@@ -1,3 +1,4 @@
+// function to calculate calculate Frame Size
 export const calculateFrameSize = (
   samples: number,
   layer: string,

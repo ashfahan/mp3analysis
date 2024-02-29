@@ -1,8 +1,8 @@
-export const versions = ['2.5', 'x', '2', '1'];
+export const VERSIONS = ['2.5', 'x', '2', '1']
 
-export const layers = ['x', '3', '2', '1'];
+export const LAYERS = ['x', '3', '2', '1']
 
-export const bitRates = {
+export const BITRATES = {
   V1Lx: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   V1L1: [0, 32, 64, 96, 128, 160, 192, 224, 256, 288, 320, 352, 384, 416, 448],
   V1L2: [0, 32, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320, 384],
@@ -15,16 +15,16 @@ export const bitRates = {
   VxL1: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   VxL2: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   VxL3: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-};
+}
 
-export const sampleRates = {
+export const SAMPLERATES = {
   x: [0, 0, 0],
   '1': [44100, 48000, 32000],
   '2': [22050, 24000, 16000],
   '2.5': [11025, 12000, 8000],
-};
+}
 
-export const samplesData = {
+export const SAMPLESDATA = {
   x: {
     x: 0,
     1: 0,
@@ -43,4 +43,4 @@ export const samplesData = {
     2: 1152,
     3: 576,
   },
-};
+}

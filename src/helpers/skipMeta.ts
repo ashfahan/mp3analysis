@@ -1,3 +1,4 @@
+// function to skipMeta if present in buffer and start from offset
 export const skipMeta = (buffer: Buffer, offset = 0) => {
   if (buffer[0] !== 73 || buffer[1] !== 68 || buffer[2] !== 51) return offset
 

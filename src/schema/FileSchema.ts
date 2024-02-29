@@ -1,5 +1,6 @@
-import { z } from 'zod';
+import { z } from 'zod'
 
+// Schema for file payload validation
 export const FileSchema = z.object(
   {
     fieldname: z.string({ required_error: 'file fieldname is missing' }),
@@ -9,5 +10,5 @@ export const FileSchema = z.object(
     buffer: z.any({ required_error: 'file buffer is missing' }),
     size: z.number({ required_error: 'file size is missing' }),
   },
-  { required_error: 'file is missing in payload' }
-);
+  { required_error: 'file is missing in payload' },
+)
